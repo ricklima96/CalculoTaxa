@@ -1,12 +1,12 @@
 # Simulação da Taxa de uma plataforma de Factoring
 
 A aplicação apresenta um formulário onde as seguintes informações deverão ser preenchidas: 
-*Nome;
-*E-mail;
-*Nome da empresa;
-*Faturamento mensal da empresa;
-*O valor do título;
-*O prazo até o vencimento (dias) do título;
+* Nome;
+* E-mail;
+* Nome da empresa;
+* Faturamento mensal da empresa;
+* O valor do título;
+* O prazo até o vencimento (dias) do título;
 
 E serão exibidos:
 *Valor da taxa;
