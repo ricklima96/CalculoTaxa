@@ -12,6 +12,10 @@ class SimulationsController < ApplicationController
   def edit
   end
 
+  def success
+    @simulation = Simulation.find(params[:id])
+  end
+
   def update
   end
 
@@ -22,9 +26,9 @@ class SimulationsController < ApplicationController
     @simulation.valorReceber = (@simulation.valorTitulo - (@simulation.valorTitulo * (@simulation.valorTaxa/100)))
 
     if @simulation.save
-      render "show"
-    else
-      render "new"
+        redirect_to success_path(@simulation.id)
+      else
+      render "index"
     end
   end
 

@@ -1678,3 +1678,885 @@ No template found for SimulationsController#create, rendering head :no_content
 Completed 204 No Content in 210ms (ActiveRecord: 0.8ms)
 
 
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:11:49 -0200
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (45.8ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations"}):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, :url => {:action => "success"} do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270649340940'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:12:43 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations"}):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, :url => {:action => "success"} do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270652741160'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:14:44 -0200
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:14:54 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"simulations"}):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, :url => {:action => "show"} do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270649958200'
+Started GET "/" for 127.0.0.1 at 2018-11-13 19:14:55 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"simulations"}):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, :url => {:action => "show"} do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270679277520'
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:15:00 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"simulations"}):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, :url => {:action => "show"} do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270651028900'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:15:46 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations"}):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, :url => {:controller => "simulations", :action => "success"}  do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270678515960'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:16:13 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations"}, missing required keys: [:id]):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, success_path  do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270652757760'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:16:46 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, success_path(@simulation.id)  do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270677533900'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:17:16 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, success_path(@simulation.valorTaxa)  do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270647606840'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:17:33 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, success_path(@simulation.id) do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270649424780'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:17:49 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, success_path(1) do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270657192500'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:18:35 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"success", :controller=>"simulations", :id=>nil}, missing required keys: [:id]):
+    1: <h1>Simular /h1>
+    2: 
+    3: <%= form_for @simulation, success_path(@simulation.id) do |form| %>
+    4: 
+    5: <% if @simulation.errors.any? %>
+    6: <h2>Errors:</h2>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb___3673296389722781189_70270651223420'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:20:21 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 350ms (Views: 344.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:20:51 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 69ms (Views: 44.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:20:58 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h7eHumGuPB+jhqfzn/2lplWXnTbftdFtuRBrtUnEYGEedOsaVcW9lB7Ed0iF1GHYi5GjpOo2WomtsZXnR40wXg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"2"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:21:27 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 42ms (Views: 26.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:21:29 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2OlpjdummA1tk3FiqIVf9oa/pN5IO+3yi5vRT9Y0sXGoMkGAwUb64j0nX6Qi9EBBBzAAUyjZFPej5EXMRGC+g==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:25:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:22:00 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2OlpjdummA1tk3FiqIVf9oa/pN5IO+3yi5vRT9Y0sXGoMkGAwUb64j0nX6Qi9EBBBzAAUyjZFPej5EXMRGC+g==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 38.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:22:54 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 65ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:23:01 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZNUAWIOm+E8kvdVxMTFGIrWjDePi4FUM00k2IWoH/dr9Fmz4t815xJn/BcorGIJca6Uzcddj3ujH6MhzZE6t5Q==", "simulation"=>{"nome"=>"luna", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:23:25 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 81ms (Views: 61.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:23:27 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3Y7FRGAblsrwM48R+QLefFttt7NBpMXGa29/pjqPBV9ETankVHAXQU1xX6rjKxoChWuJIXQnTiJ/zoH0NMZVYA==", "simulation"=>{"nome"=>"luna", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 58ms (Views: 51.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:25:12 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 90ms (Views: 57.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:25:14 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xZZXN7K71KAl8iaEpZMCK79fergykMErtzODTiv56VpcVTuXhtBVK5iw9j+/usZVYVlEKgcTSs+jkn0cJbC5ZQ==", "simulation"=>{"nome"=>"luna", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:26:03 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/config/routes.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...id' => 'simulations#success' as :success 
+...                             ^~):
+  
+config/routes.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:27:22 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 69ms (Views: 51.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:27:31 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9Acks/lNO7IHiVhBGqfTbz6DajjoGM7OodAA08o5IUCE3Ay+461ZXVc9doeQ1szYvwzOtYj6N8uJr5RQWG0ug==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12\r\n"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:28:39 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:28:40 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dEV9hLJdN5dmd10/Ygad/SSwxfTKX+/W+V3GY1I67JTthhEkhja2HNs1jYR4L1mD+rb7Zv/cZDLt/DgxXHO8qw==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12\r\n"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:28:50 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...ss" => "simulations#success" as: "success"
+...                             ^~):
+  
+config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:29:15 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...", to: "simulations#success" as: "success"
+...                             ^~):
+  
+config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:34:10 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (1.4ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+Completed 404 Not Found in 11ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Simulation with 'id'=simulations):
+  
+app/controllers/simulations_controller.rb:16:in `success'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:04 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.1ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Simulation with 'id'=simulations):
+  
+app/controllers/simulations_controller.rb:16:in `success'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:07 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.1ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Simulation with 'id'=simulations):
+  
+app/controllers/simulations_controller.rb:16:in `success'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:24 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/controllers/simulations_controller.rb:16: syntax error, unexpected ')', expecting keyword_end
+...imulation = Simulation.find(1))
+...                              ^
+/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/controllers/simulations_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/simulations_controller.rb:16: syntax error, unexpected ')', expecting keyword_end
+app/controllers/simulations_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:32 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 82ms (Views: 49.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:34 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:35 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.4ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 54ms (Views: 45.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:35 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:35 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:35 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.5ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:35 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 47.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:36 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 52ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:35:56 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"simulations"}
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `valorTaxa' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Valor da taxa:</strong>
+    5:   <%= @simulation.valorTaxa %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/simulations/success.html.erb:5:in `_app_views_simulations_success_html_erb___2019880868308320679_70270679738380'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:36:20 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/controllers/simulations_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+  end
+  ^~~
+/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/controllers/simulations_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/simulations_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/simulations_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:36:34 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/controllers/simulations_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+  end
+  ^~~
+/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/controllers/simulations_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/simulations_controller.rb:17: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/simulations_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:36:47 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 45ms (Views: 27.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:36:53 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WSsy1MpsLAEyYtmNMqaMsvC4FezZcqdCjbqhT6z5zgHA6F50/getio8gCTYoj0jMLr4rfuzxLKaZG18dorCePg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:37:11 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:38:00 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Supc8C4+Z87Qk0GgIegKTxfxzO9sP6FG63Al+9hYGonTKTBQGlXmRW3RkRs7wc4xyffyfVm8KqL/0dup1hFKtg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"2"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 51ms (Views: 34.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:38:01 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:38:06 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jy3/M6ZZN8aKJvi8MPKwBS5Xy2tGcoMjHVQLqv8xpJW+7pOTkjK2TTdkKAcq23R78FH1+XPxCMcJ9fX48Xj0qg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"2"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 48.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:38:07 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:38:14 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEg2MymizYfp0E87Z/V2mPcL2XewZCGldAhVjrbzoX1Ri1qTHclMDFSSn4B93LLmKQ3n5YXnqkFgqavcuLrxQg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"2"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 43.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:38:15 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:42:23 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKNKjoU3naqTMAdfGNM0gHwC6+TABzDeL7TYWGjp6ZXZYCYusVwcIS5y1+QC+vD+ogTVdvWEuzo7FSYKZqC5qg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"2"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 35.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:42:34 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 137ms (Views: 110.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:42:35 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KqsmX48kPK2BPirQcxZoAt8LuWK3z5VlqrN5N4Z7RVGzaEr/u0+9Jjx8+mtpP6x8AQ2H8IJMHoG+EodliDIVbg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"2"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 74ms (Views: 58.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:42:47 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 85ms (Views: 61.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:42:49 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0iY+rUTlQ6pf3tWOzgDhZf9xxNLIVq+uzpq+BMsr65ZL5VINcI7CIeKcBTXUKSUbIXf6QP3VJEraO0BWxWK7qQ==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:25:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:42:58 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0iY+rUTlQ6pf3tWOzgDhZf9xxNLIVq+uzpq+BMsr65ZL5VINcI7CIeKcBTXUKSUbIXf6QP3VJEraO0BWxWK7qQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 19:59:37 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 66ms (Views: 46.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 19:59:38 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cowrQw8U8v1QPvWApEPOLibazS/vl+S3EH9hMEeCmrrrT0fjO39zdu18JTu+agpQ+NzzvdoUb1ME3p9iScvKhQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:01:52 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 62ms (Views: 43.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:01:53 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rbraaoVU8ffJAkeJmq4vwzRwqe1jsQzTJn/hnUUpans0ebbKsT9wfHRAlzKAh+u96naXf1Yyhzcy3h/PS2A6RA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:01:57 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:28 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"THDz9xA8v/lmh7l4+Kt1fGMxLgo2vmpgSkTQ2DQyry3Vs59XJFc+ctvFacPigrECvTcQmAM94YRe5S6KOnv/Eg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::MissingTemplate (Missing template simulations/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/app/views"
+):
+  
+app/controllers/simulations_controller.rb:32:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:51 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"THDz9xA8v/lmh7l4+Kt1fGMxLgo2vmpgSkTQ2DQyry3Vs59XJFc+ctvFacPigrECvTcQmAM94YRe5S6KOnv/Eg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 133ms (Views: 80.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:53 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZCLpAYwZNpE1BDWrxSbwpgVJ1ZUq5Iisizc+KIbZfnT94YWhuHK3GohG5RDfDzTY20/rBx9nA0iflsB6iJAuSw==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 56ms (Views: 50.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:54 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UDMAseWaJ5j/oIAtVL1U72DscVcReBmFCqeZLNLHbqPJ8GwR0fGmE0LiUJZOlJCRvupPxST7kmEeBmd+3I4+nA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:55 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J8dwl0CyuqUdApqiZ/NRF9JsR/e0+hDpi1Dd5BHeKJ6+BBw3dNk7LqBAShl92pVpDGp5ZYF5mw2f8SO2H5d4oQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 44ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:55 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANFKpsdV5fQCw5AsA/WnVMk/bdU3rIomUEsCoEdODJ+ZEiYG8z5kf7+BQJcZ3GMqFzlTRwIvAcJE6vzySQdcoA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 48ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:03:55 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kMhX3mKLpaWbi1ZKltYwtvvjlxFZCkLDpXLW2F6boFAJCzt+VuAkLibJhvGM//TIJeWpg2yJySex0yiKUNLwbw==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:04:00 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5PmrRgafloY5YJDmuLEkrpIbTDzzZwR4XFS+QMAqhnqUIoNLHH/0aWnUviAywDsZE5TosZOF/X10KyrDUn6Jg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12000", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (4.3ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "12"], ["faturamentoMensal", 12.0], ["valorTitulo", 12000.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11762.4], ["created_at", "2018-11-13 22:04:00.468416"], ["updated_at", "2018-11-13 22:04:00.468416"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Redirected to http://localhost:3000/simulations/34
+Completed 302 Found in 20ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/simulations/34" for 127.0.0.1 at 2018-11-13 20:04:00 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mSimulation Load (0.5ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 50.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:04:07 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:04:26 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 80ms (Views: 47.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:04:45 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mA7TpEBf7snXJISn68qb/GeOXYBrkqBZgHm9dtOReokBzb8EdDRvQmpmVBzx41+CuYhjEl4RK72U2EMk3dgqtg==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"Empresa ricardo", "faturamentoMensal"=>"75000", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ricardo"], ["nomeEmpresa", "Empresa ricardo"], ["faturamentoMensal", 75000.0], ["valorTitulo", 1500.0], ["prazoTitulo", 28.0], ["valorTaxa", 4.62], ["valorReceber", 1430.7], ["created_at", "2018-11-13 22:04:45.976395"], ["updated_at", "2018-11-13 22:04:45.976395"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Redirected to http://localhost:3000/simulations/35
+Completed 302 Found in 15ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/simulations/35" for 127.0.0.1 at 2018-11-13 20:04:45 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mSimulation Load (0.4ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
