@@ -14,10 +14,9 @@ E serão exibidos:
 * Valor a receber;
 
 
-* Deployment instructions
+Deployment instructions
 1. Suba o servidor utilizando o comando ruby s
 2. Acesse o endereço "http://localhost:3000/simulations"
 
-
-* Ruby version
+Ruby version
 ruby 2.5.3p105 
