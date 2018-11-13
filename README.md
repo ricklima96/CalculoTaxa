@@ -14,7 +14,7 @@ E serão exibidos:
 * Valor a receber;
 
 
-Deployment instructions
+Instruções de deploy
 1. Suba o servidor utilizando o comando ruby s
 2. Acesse o endereço "http://localhost:3000/simulations"
 
