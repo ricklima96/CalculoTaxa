@@ -1,24 +1,22 @@
-# README
+# Simulação da Taxa de uma plataforma de Factoring
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A aplicação apresenta um formulário onde as seguintes informações deverão ser preenchidas: 
+* Nome;
+* E-mail;
+* Nome da empresa;
+* Faturamento mensal da empresa;
+* O valor do título;
+* O prazo até o vencimento (dias) do título;
 
-Things you may want to cover:
 
-* Ruby version
+E serão exibidos:
+* Valor da taxa;
+* Valor a receber;
 
-* System dependencies
 
-* Configuration
+Instruções de deploy
+1. Suba o servidor utilizando o comando ruby s
+2. Acesse o endereço "http://localhost:3000/simulations"
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby version
+* ruby 2.5.3p105 
