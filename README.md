@@ -9,8 +9,8 @@ A aplicação apresenta um formulário onde as seguintes informações deverão 
 * O prazo até o vencimento (dias) do título;
 
 E serão exibidos:
-*Valor da taxa;
-*Valor a receber;
+* Valor da taxa;
+* Valor a receber;
 
 
 * Ruby version
