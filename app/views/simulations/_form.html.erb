@@ -1,0 +1,57 @@
+<%= form_with(model: simulation, local: true) do |form| %>
+  <% if simulation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(simulation.errors.count, "error") %> prohibited this simulation from being saved:</h2>
+
+      <ul>
+      <% simulation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomeEmpresa %>
+    <%= form.text_field :nomeEmpresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :faturamentoMensal %>
+    <%= form.text_field :faturamentoMensal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorTitulo %>
+    <%= form.text_field :valorTitulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prazoTitulo %>
+    <%= form.text_field :prazoTitulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorTaxa %>
+    <%= form.text_field :valorTaxa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorReceber %>
+    <%= form.text_field :valorReceber %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<h1>Simular /h1>
+
+<%= form_for @simulation do |form| %>
+
+<% if @simulation.errors.any? %>
+<h2>Errors:</h2>
+<ul>
+  <% @simulation.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<p>
+  <%= form.label :nome  %>
+  <%= form.text_field :nome  %>
+</p>
+<p>
+  <%= form.label :nomeEmpresa  %>
+  <%= form.text_area :nomeEmpresa  %>
+</p>
+<p>
+  <%= form.label :faturamentoMensal  %>
+  <%= form.text_area :faturamentoMensal  %>
+</p>
+<p>
+  <%= form.label :valorTitulo  %>
+  <%= form.text_area :valorTitulo  %>
+</p>
+<p>
+  <%= form.label :prazoTitulo  %>
+  <%= form.text_area :prazoTitulo  %>
+</p>
+<p>
+  <%= form.submit "SIMULAR" %>
+</p>
+<% end %>

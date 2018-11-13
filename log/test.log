@@ -1,0 +1,94 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "simulations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "simulations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "nomeEmpresa" varchar, "faturamentoMensal" decimal, "valorTitulo" decimal, "prazoTitulo" decimal, "valorTaxa" decimal, "valorReceber" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181112204826)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-11-12 21:39:18.351726"], ["updated_at", "2018-11-12 21:39:18.351726"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "simulations"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "email", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 9.99, 9.99, 9.99, 9.99, 9.99, '2018-11-12 21:39:18.560112', '2018-11-12 21:39:18.560112', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "email", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 9.99, 9.99, 9.99, 9.99, 9.99, '2018-11-12 21:39:18.560112', '2018-11-12 21:39:18.560112', 298486374)[0m
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+SimulationsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[36mSimulation Load (0.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 418ms (Views: 404.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+SimulationsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/simulations/new" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+Processing by SimulationsController#new as HTML
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+SimulationsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mSimulation Load (0.1ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/simulations/980190962/edit" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+Processing by SimulationsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+SimulationsControllerTest: test_should_show_simulation
+------------------------------------------------------
+  [1m[36mSimulation Load (0.1ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/simulations/980190962" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+Processing by SimulationsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SimulationsControllerTest: test_should_destroy_simulation
+---------------------------------------------------------
+  [1m[36mSimulation Load (0.1ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "simulations"[0m
+Started DELETE "/simulations/980190962" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+SimulationsControllerTest: test_should_update_simulation
+--------------------------------------------------------
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/simulations/980190962" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+SimulationsControllerTest: test_should_create_simulation
+--------------------------------------------------------
+  [1m[36mSimulation Load (0.1ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "simulations"[0m
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:39:19 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"simulation"=>{"email"=>"MyString", "faturamentoMensal"=>"9.99", "nome"=>"MyString", "nomeEmpresa"=>"MyString", "prazoTitulo"=>"9.99", "valorReceber"=>"9.99", "valorTaxa"=>"9.99", "valorTitulo"=>"9.99"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "email", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "MyString"], ["email", "MyString"], ["nomeEmpresa", "MyString"], ["faturamentoMensal", 9.99], ["valorTitulo", 9.99], ["prazoTitulo", 9.99], ["valorTaxa", 1.64835], ["valorReceber", 9.825329835], ["created_at", "2018-11-12 21:39:19.934701"], ["updated_at", "2018-11-12 21:39:19.934701"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m

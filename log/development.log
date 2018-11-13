@@ -1,0 +1,1680 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to CreateSimulations (20181112204826)
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "simulations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "nomeEmpresa" varchar, "faturamentoMensal" decimal, "valorTitulo" decimal, "prazoTitulo" decimal, "valorTaxa" decimal, "valorReceber" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181112204826_create_simulations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181112204826"]]
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-12 20:50:27.982641"], ["updated_at", "2018-11-12 20:50:27.982641"]]
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-11-12 18:51:16 -0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (8.1ms)
+Completed 200 OK in 46ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-11-12 18:51:22 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/Calculotaxa" for 127.0.0.1 at 2018-11-12 18:51:31 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/Calculotaxa"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:51:45 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  [1m[36mSimulation Load (1.2ms)[0m  [1m[34mSELECT "simulations".* FROM "simulations"[0m
+  ↳ app/views/simulations/index.html.erb:21
+  Rendered simulations/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 622ms (Views: 594.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/simulations/new" for 127.0.0.1 at 2018-11-12 18:51:51 -0200
+Processing by SimulationsController#new as HTML
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/_form.html.erb (32.9ms)
+  Rendered simulations/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 126ms (Views: 80.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/simulations/new" for 127.0.0.1 at 2018-11-12 18:54:21 -0200
+Processing by SimulationsController#new as HTML
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 77ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:54:25 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT "simulations".* FROM "simulations"[0m
+  ↳ app/views/simulations/index.html.erb:21
+  Rendered simulations/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations/new" for 127.0.0.1 at 2018-11-12 18:54:32 -0200
+Processing by SimulationsController#new as HTML
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 66ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:54:57 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a New Post</h1>
+    2: 
+    3: <%= form_for @simulation do |form| %>
+    4: 
+    5: <p>
+    6:   <%= form.label :nome  %>
+  
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb__2037456078291762019_70151075465440'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:55:47 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 93ms (Views: 65.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:55:57 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:59:09 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 101ms (Views: 73.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 18:59:21 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hgFpusK1TbQVTVsQ71R0s9VulXoCCw/A9G/tZOXzVZofwgUa9t7MP6gPi6v1fbDNC2ir6DeIhCTgzhM267oFpQ==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"LLA", "faturamentoMensal"=>"1500", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[36mSimulation Create (2.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ricardo"], ["nomeEmpresa", "LLA"], ["faturamentoMensal", 1500.0], ["valorTitulo", 1500.0], ["prazoTitulo", 28.0], ["valorTaxa", 4.62], ["valorReceber", 1430.7], ["created_at", "2018-11-12 20:59:21.390673"], ["updated_at", "2018-11-12 20:59:21.390673"]]
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+Redirected to http://localhost:3000/simulations
+Completed 302 Found in 34ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 18:59:21 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSimulation Load (2.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:01:25 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NUKBMBYwZD6KySSvyX1yaJ3EWtW1XPS4m5JC44jU16isge2QIlvltTeL9BTTVLYWQ8JkR4Dff1yPM7yxhp2Hlw==", "simulation"=>{"nome"=>"Fernando", "nomeEmpresa"=>"Fernando Compnay", "faturamentoMensal"=>"2000", "valorTitulo"=>"24", "prazoTitulo"=>"29"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[36mSimulation Create (0.8ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Fernando"], ["nomeEmpresa", "Fernando Compnay"], ["faturamentoMensal", 2000.0], ["valorTitulo", 24.0], ["prazoTitulo", 29.0], ["valorTaxa", 4.785], ["valorReceber", 22.8516], ["created_at", "2018-11-12 21:01:25.988563"], ["updated_at", "2018-11-12 21:01:25.988563"]]
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+Redirected to http://localhost:3000/simulations
+Completed 302 Found in 14ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:01:26 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 69ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSimulation Load (0.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:02:25 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (288.8ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<#<Class:0x00007f9aa83f7268>:0x00007f9aa3c3e4f8>
+Did you mean?  new_simulation_path):
+    23:   <%= form.text_area :prazoTitulo  %>
+    24: </p>
+    25: <p>
+    26:   <%= form.submit "SIMULAR", new_post_path %>
+    27: 
+    28: </p>
+    29: <% end %>
+  
+app/views/simulations/index.html.erb:26:in `block in _app_views_simulations_index_html_erb__2037456078291762019_70151074609160'
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb__2037456078291762019_70151074609160'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:02:26 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z/77z66D7JNuYiEV4miCcKxFP2S1g5gBk3k5dbCbKnRWPZdvmuhtGNMg8a74QUYOckMB9oAAE+WH2McnvtJ6Sw==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:17:in `create'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:02:32 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (274.8ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<#<Class:0x00007f9aa83f7268>:0x00007f9aa45cc6f0>
+Did you mean?  new_simulation_path):
+    23:   <%= form.text_area :prazoTitulo  %>
+    24: </p>
+    25: <p>
+    26:   <%= form.submit "SIMULAR", new_post_path %>
+    27: 
+    28: </p>
+    29: <% end %>
+  
+app/views/simulations/index.html.erb:26:in `block in _app_views_simulations_index_html_erb__2037456078291762019_70151079618880'
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb__2037456078291762019_70151079618880'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:02:38 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 76ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:02:39 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTEbAhkMMTwYJ5e3ygQR2GQFyrvcCP+RkNjXfwrjcTC88neiLWewt6VlRwzQLdWmugP0KemLdHWEeSktBKohDw==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:17:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:02:52 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTEbAhkMMTwYJ5e3ygQR2GQFyrvcCP+RkNjXfwrjcTC88neiLWewt6VlRwzQLdWmugP0KemLdHWEeSktBKohDw==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:17:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:03:00 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTEbAhkMMTwYJ5e3ygQR2GQFyrvcCP+RkNjXfwrjcTC88neiLWewt6VlRwzQLdWmugP0KemLdHWEeSktBKohDw==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:17:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:03:38 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTEbAhkMMTwYJ5e3ygQR2GQFyrvcCP+RkNjXfwrjcTC88neiLWewt6VlRwzQLdWmugP0KemLdHWEeSktBKohDw==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:17:in `create'
+Started GET "/" for 127.0.0.1 at 2018-11-12 19:03:40 -0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 26ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:03:43 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 87ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:03:45 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jsjmHvOPb2P64upwV/fxkbKGWMTF5Xbg6eJAoo1S03gXC4q+x+Tu6EegOstN3jXvbIBmVvBm/QT9Q77wgxuDRw==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:17:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:03:55 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jsjmHvOPb2P64upwV/fxkbKGWMTF5Xbg6eJAoo1S03gXC4q+x+Tu6EegOstN3jXvbIBmVvBm/QT9Q77wgxuDRw==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"as", "valorTitulo"=>"122", "prazoTitulo"=>"122"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[36mSimulation Create (0.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 0.0], ["valorTitulo", 122.0], ["prazoTitulo", 122.0], ["valorTaxa", 20.13], ["valorReceber", 97.4414], ["created_at", "2018-11-12 21:03:55.098934"], ["updated_at", "2018-11-12 21:03:55.098934"]]
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+Redirected to http://localhost:3000/simulations
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:03:55 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:14:11 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 81ms (Views: 54.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:14:17 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPKPAcZY6fAuheSlD3HmNH18T74DRBLZC4HyGqidsEUJMeOh8jNoe5PHNB4VWCJKo3pxLDbHmT0fIAxIptTgeg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[36mSimulation Create (3.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 21:14:17.436397"], ["updated_at", "2018-11-12 21:14:17.436397"]]
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 6.6ms)
+
+
+  
+NameError (undefined local variable or method `sucesso' for #<SimulationsController:0x00007f9aa461d730>
+Did you mean?  sucesso_url):
+  
+app/controllers/simulations_controller.rb:21:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:14:30 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPKPAcZY6fAuheSlD3HmNH18T74DRBLZC4HyGqidsEUJMeOh8jNoe5PHNB4VWCJKo3pxLDbHmT0fIAxIptTgeg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[36mSimulation Create (0.5ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 21:14:30.626926"], ["updated_at", "2018-11-12 21:14:30.626926"]]
+  ↳ app/controllers/simulations_controller.rb:20
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:20
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"sucesso"}, missing required keys: [:id]):
+  
+app/controllers/simulations_controller.rb:21:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:15:35 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPKPAcZY6fAuheSlD3HmNH18T74DRBLZC4HyGqidsEUJMeOh8jNoe5PHNB4VWCJKo3pxLDbHmT0fIAxIptTgeg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 21:15:35.124048"], ["updated_at", "2018-11-12 21:15:35.124048"]]
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 4.0ms)
+
+
+  
+NameError (undefined local variable or method `sucesso_url' for #<SimulationsController:0x00007f9aa8142310>
+Did you mean?  sucesso):
+  
+app/controllers/simulations_controller.rb:24:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:15:45 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPKPAcZY6fAuheSlD3HmNH18T74DRBLZC4HyGqidsEUJMeOh8jNoe5PHNB4VWCJKo3pxLDbHmT0fIAxIptTgeg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[36mSimulation Create (0.8ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 21:15:45.682902"], ["updated_at", "2018-11-12 21:15:45.682902"]]
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+Redirected to 
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/simulations_controller.rb:24:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:15:49 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPKPAcZY6fAuheSlD3HmNH18T74DRBLZC4HyGqidsEUJMeOh8jNoe5PHNB4VWCJKo3pxLDbHmT0fIAxIptTgeg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[36mSimulation Create (0.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 21:15:49.157685"], ["updated_at", "2018-11-12 21:15:49.157685"]]
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+Redirected to 
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/simulations_controller.rb:24:in `create'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:24:25 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 89ms (Views: 61.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:24:34 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wv8cCRK+7kLdtzhQBgahOWx7WiF599XLQQC8/hJSj5VbPHCpJtVvyWD16OscL2VHsn1ks0x0Xi9VoUKsHBvfqg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[36mSimulation Create (2.3ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:24:34.998453"], ["updated_at", "2018-11-12 21:24:34.998453"]]
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  Rendering simulations/sucesso.html.erb within layouts/application
+  Rendered simulations/sucesso.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 52.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:25:53 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:25:54 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[36mSimulation Create (0.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:25:54.519519"], ["updated_at", "2018-11-12 21:25:54.519519"]]
+  ↳ app/controllers/simulations_controller.rb:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:23
+  Rendering simulations/sucesso.html.erb within layouts/application
+  Rendered simulations/sucesso.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>sucesso!</h1>
+    2: 
+    3: 
+    4: <% @simulations.each do |simulation| %>
+    5: <p><%= simulation.prazoTitulo %></p>
+    6: <%  end  %>
+  
+app/views/simulations/sucesso.html.erb:4:in `_app_views_simulations_sucesso_html_erb__849299867739439844_70151111314900'
+app/controllers/simulations_controller.rb:24:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:32:31 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:32:31.915950"], ["updated_at", "2018-11-12 21:32:31.915950"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:29:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:32:44 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:32:45.023394"], ["updated_at", "2018-11-12 21:32:45.023394"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 3.1ms)
+
+
+  
+NoMethodError (undefined method `location_path' for #<SimulationsController:0x00007f9aa6a44320>
+Did you mean?  location):
+  
+app/controllers/simulations_controller.rb:29:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:32:56 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.6ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:32:56.486808"], ["updated_at", "2018-11-12 21:32:56.486808"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.1ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/simulations_controller.rb:14:in `sucesso'
+app/controllers/simulations_controller.rb:29:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:33:25 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:33:25.656936"], ["updated_at", "2018-11-12 21:33:25.656936"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/simulations_controller.rb:14:in `sucesso'
+app/controllers/simulations_controller.rb:28:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:34:08 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:34:08.614816"], ["updated_at", "2018-11-12 21:34:08.614816"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Load (0.4ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:15
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.2ms)
+
+
+  
+ArgumentError ('0.165e0' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+  
+app/controllers/simulations_controller.rb:17:in `sucesso'
+app/controllers/simulations_controller.rb:28:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:34:31 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:34:31.751020"], ["updated_at", "2018-11-12 21:34:31.751020"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:15
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::MissingTemplate (Missing template simulations/oi, application/oi with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/CalculoTaxa/app/views"
+):
+  
+app/controllers/simulations_controller.rb:17:in `sucesso'
+app/controllers/simulations_controller.rb:28:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:36:43 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ata0K0GyiTOgFAOoJLePpXDAcNte7FyY3BEtoxbOwZ8aDZwmW1Lr3PCgLW6uxpAS8U/UVj4OpZ30brkghJrOQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"1", "valorTitulo"=>"1", "prazoTitulo"=>"1"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 1.0], ["valorTitulo", 1.0], ["prazoTitulo", 1.0], ["valorTaxa", 0.165], ["valorReceber", 0.99835], ["created_at", "2018-11-12 21:36:43.720041"], ["updated_at", "2018-11-12 21:36:43.720041"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/simulations_controller.rb:14:in `sucesso'
+app/controllers/simulations_controller.rb:29:in `create'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:44:41 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 88ms (Views: 68.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:44:47 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQPabDpx8+9MhRl0Mh1qYiM9SQicyQ6PAoVQ8nq9yH+kwLbMDhpyZPHHyc8oNK4c/Tt3mqlKhWsWJK6gdPSYQA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"123", "valorTitulo"=>"123", "prazoTitulo"=>"123"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (2.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 123.0], ["valorTitulo", 123.0], ["prazoTitulo", 123.0], ["valorTaxa", 20.295], ["valorReceber", 98.03715], ["created_at", "2018-11-12 21:44:47.478666"], ["updated_at", "2018-11-12 21:44:47.478666"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 6.5ms)
+
+
+  
+NoMethodError (undefined method `sucesso_path' for #<SimulationsController:0x00007f9aa469c850>
+Did you mean?  sucesso):
+  
+app/controllers/simulations_controller.rb:29:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:45:01 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQPabDpx8+9MhRl0Mh1qYiM9SQicyQ6PAoVQ8nq9yH+kwLbMDhpyZPHHyc8oNK4c/Tt3mqlKhWsWJK6gdPSYQA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"123", "valorTitulo"=>"123", "prazoTitulo"=>"123"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 123.0], ["valorTitulo", 123.0], ["prazoTitulo", 123.0], ["valorTaxa", 20.295], ["valorReceber", 98.03715], ["created_at", "2018-11-12 21:45:01.866917"], ["updated_at", "2018-11-12 21:45:01.866917"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.9ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/simulations_controller.rb:14:in `sucesso'
+app/controllers/simulations_controller.rb:29:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:46:26 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQPabDpx8+9MhRl0Mh1qYiM9SQicyQ6PAoVQ8nq9yH+kwLbMDhpyZPHHyc8oNK4c/Tt3mqlKhWsWJK6gdPSYQA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"123", "valorTitulo"=>"123", "prazoTitulo"=>"123"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.6ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 123.0], ["valorTitulo", 123.0], ["prazoTitulo", 123.0], ["valorTaxa", 20.295], ["valorReceber", 98.03715], ["created_at", "2018-11-12 21:46:26.519547"], ["updated_at", "2018-11-12 21:46:26.519547"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Redirected to http://localhost:3000/simulations/sucesso.20?id=20
+Completed 302 Found in 32ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/simulations/sucesso.20?id=20" for 127.0.0.1 at 2018-11-12 19:46:26 -0200
+Processing by SimulationsController#show as 
+  Parameters: {"id"=>"sucesso"}
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_simulation' for #<SimulationsController:0x00007f9aa4425518>):
+  
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:46:32 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 72ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:46:34 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/OYUbxvvKBXiHRJE44IpzqiLQInxtQFU8bkYBGFE1N5lJXjPL4Spnl9fwv/5q+2wdo1+G8Q2irDlGOZWbw2E4Q==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"123", "valorTitulo"=>"123", "prazoTitulo"=>"123"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (2.0ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 123.0], ["valorTitulo", 123.0], ["prazoTitulo", 123.0], ["valorTaxa", 20.295], ["valorReceber", 98.03715], ["created_at", "2018-11-12 21:46:34.568862"], ["updated_at", "2018-11-12 21:46:34.568862"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Redirected to http://localhost:3000/simulations/sucesso.21?id=21
+Completed 302 Found in 13ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/simulations/sucesso.21?id=21" for 127.0.0.1 at 2018-11-12 19:46:34 -0200
+Processing by SimulationsController#show as 
+  Parameters: {"id"=>"sucesso"}
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_simulation' for #<SimulationsController:0x00007f9aa3d735d0>):
+  
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:56:34 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 79ms (Views: 59.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:56:36 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cuEHVDG3qlL0AcKHhI8J4vTs5CNYzsVQyatSeCjDpdnrImv0Bdwr2UlDEjyeps2cKurasW1NTrTdCqwqJor15g==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"123", "valorTitulo"=>"123", "prazoTitulo"=>"123"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (2.0ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 123.0], ["valorTitulo", 123.0], ["prazoTitulo", 123.0], ["valorTaxa", 20.295], ["valorReceber", 98.03715], ["created_at", "2018-11-12 21:56:36.678826"], ["updated_at", "2018-11-12 21:56:36.678826"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 4.3ms)
+
+
+  
+NameError (undefined local variable or method `show_path' for #<SimulationsController:0x00007f9aa68501b8>):
+  
+app/controllers/simulations_controller.rb:29:in `create'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:57:36 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 78ms (Views: 48.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:57:59 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CIRLr0Le0V83/z9bIQOSfKrZPc59hIpQDgGeq1l5qJyRRycPdrVQ1Iq97+A7KlYCdN8DXEgHAbQaoGD5VzD4ow==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12\r\n"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (0.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 21:57:59.311326"], ["updated_at", "2018-11-12 21:57:59.311326"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Redirected to http://localhost:3000/simulations
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 19:57:59 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 59ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:58:00 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WJTPMXv8Ld9FKpJmQJ1JwRy30lNnwyyYeIApiUVy0NzBV6ORT5esVPhoQt1atI2/wrHswVJAp3xsIdfbSzuA4w==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:25:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 19:58:06 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WJTPMXv8Ld9FKpJmQJ1JwRy30lNnwyyYeIApiUVy0NzBV6ORT5esVPhoQt1atI2/wrHswVJAp3xsIdfbSzuA4w==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:25:in `create'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 20:02:53 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (150.0ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `sucesso_path' for #<#<Class:0x00007f9aa6f99488>:0x00007f9aa6f83908>):
+    23:   <%= form.text_area :prazoTitulo  %>
+    24: </p>
+    25: <p>
+    26:   <%= form.submit "SIMULAR", sucesso_path(@simulation) %>
+    27:  %>
+    28: </p>
+    29: <% end %>
+  
+app/views/simulations/index.html.erb:26:in `block in _app_views_simulations_index_html_erb__2037456078291762019_70151101533780'
+app/views/simulations/index.html.erb:3:in `_app_views_simulations_index_html_erb__2037456078291762019_70151101533780'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 20:04:11 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 81ms (Views: 55.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 20:04:30 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXaaOwS90JtU9Pg3vdfk8zHc2L8K1//OCEkYEoJK/uAAtfabMNZREOm2KIyn/iCN79rmLT9UdCoc6OZAjAOu3w==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12\r\n"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:26
+  [1m[36mSimulation Create (1.8ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-12 22:04:30.110124"], ["updated_at", "2018-11-12 22:04:30.110124"]]
+  ↳ app/controllers/simulations_controller.rb:26
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:26
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 4.8ms)
+
+
+  
+NoMethodError (undefined method `sucesso_path' for #<SimulationsController:0x00007f9aa463df80>
+Did you mean?  sucesso):
+  
+app/controllers/simulations_controller.rb:27:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 22:24:30 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXaaOwS90JtU9Pg3vdfk8zHc2L8K1//OCEkYEoJK/uAAtfabMNZREOm2KIyn/iCN79rmLT9UdCoc6OZAjAOu3w==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12\r\n"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (1.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 00:24:31.157496"], ["updated_at", "2018-11-13 00:24:31.157496"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 115ms (Views: 68.4ms | ActiveRecord: 6.7ms)
+
+
+Started PATCH "/simulations/25" for 127.0.0.1 at 2018-11-12 22:24:33 -0200
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for SimulationsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/simulations/25" for 127.0.0.1 at 2018-11-12 22:25:03 -0200
+Processing by SimulationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpEtdab2h2GNh5aecVrTbHM2hQlILSh+H69O6iIPutEbUkHVkp0G6jDFRiVrcxcSrTC7m32uo5oLDrC4LEbq7g==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12.0", "valorTitulo"=>"12.0", "prazoTitulo"=>"12.0"}, "commit"=>"SIMULAR", "id"=>"25"}
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_simulation' for #<SimulationsController:0x00007f9aa37b0c10>):
+  
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 22:25:54 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 72ms (Views: 53.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 22:27:10 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cR4wAcdSk9unV3RUfOb7F0gwmVaf07apsSrW/jRbGwno3Vyh8zkSUBoVpO9mzz9pljanxKpQPU2liyisOhJLNg==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:30
+  [1m[36mSimulation Create (1.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 00:27:10.977581"], ["updated_at", "2018-11-13 00:27:10.977581"]]
+  ↳ app/controllers/simulations_controller.rb:30
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:30
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 66ms (Views: 35.2ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/simulations/26" for 127.0.0.1 at 2018-11-12 22:27:25 -0200
+Processing by SimulationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"frE+7nE0z8ZEGNkGTEv04MrxIjwBsP2P5C4XTi1jv1LnclJORV9OTflaCb1WYjCeFPccrjQzdmvwj+kcIyrvbQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12.0", "valorTitulo"=>"12.0", "prazoTitulo"=>"12.0"}, "commit"=>"SIMULAR", "id"=>"26"}
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_simulation' for #<SimulationsController:0x00007f9aa3d2b348>):
+  
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/simulations/26" for 127.0.0.1 at 2018-11-12 22:29:20 -0200
+Processing by SimulationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"frE+7nE0z8ZEGNkGTEv04MrxIjwBsP2P5C4XTi1jv1LnclJORV9OTflaCb1WYjCeFPccrjQzdmvwj+kcIyrvbQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12.0", "valorTitulo"=>"12.0", "prazoTitulo"=>"12.0"}, "commit"=>"SIMULAR", "id"=>"26"}
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_simulation' for #<SimulationsController:0x00007f9aa6c452c8>):
+  
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 22:29:22 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 50ms (Views: 27.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 22:29:27 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wehHSWhTrYriyX4TBl35ELLHo3sVoBihBmrx+dtUF1ZYKyvpXDgsAV+LrqgcdD1ubMGd6SAjk0USyw+r1R1HaQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:30
+  [1m[36mSimulation Create (1.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "12"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 00:29:27.865492"], ["updated_at", "2018-11-13 00:29:27.865492"]]
+  ↳ app/controllers/simulations_controller.rb:30
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:30
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 36.5ms | ActiveRecord: 4.2ms)
+
+
+Started PATCH "/simulations/27" for 127.0.0.1 at 2018-11-12 22:29:54 -0200
+Processing by SimulationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NgTngH0tB6fE58FKEYGa6IC8L5TwFEasUXgsihisAjuvx4sgSUaGLHmlEfELqF6WXroRBsWXzUhF2dLYFuVSBA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12.0", "valorTitulo"=>"12.0", "prazoTitulo"=>"12.0"}, "commit"=>"SIMULAR", "id"=>"27"}
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_simulation' for #<SimulationsController:0x00007f9aa6ed5510>):
+  
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 22:29:56 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 30.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 22:58:16 -0200
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/CalculoTaxa/app/controllers/simulations_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+      render action: "show"
+                      ^~~~
+/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/CalculoTaxa/app/controllers/simulations_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+      render "new"
+              ^~~
+/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/CalculoTaxa/app/controllers/simulations_controller.rb:35: unterminated string meets end of file
+/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/CalculoTaxa/app/controllers/simulations_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/simulations_controller.rb:25: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/simulations_controller.rb:27: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/simulations_controller.rb:35: unterminated string meets end of file
+app/controllers/simulations_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:00:00 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 73ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:00:08 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dYfr0h2ZEhm4hIqk1NHDOcztZWvpTYqvXBgaubORk+/sRIdyKfKTkgXGWh/O+AdHEutb+dzOAUtIueTrvdjD0A==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"2", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[36mSimulation Create (2.5ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 2.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 1.9604], ["created_at", "2018-11-13 01:00:08.826049"], ["updated_at", "2018-11-13 01:00:08.826049"]]
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 43.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:01:32 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 76ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:01:44 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5RVtRmA91SYTpfRYUl/JBUC2xQGdugopUBca/aWyLpAu8IPypuBL/HEcv57bc6bx1TKjzZxQ/I0yCfU/DPmySw==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"Ricardo Company", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[36mSimulation Create (1.0ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ricardo"], ["nomeEmpresa", "Ricardo Company"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 01:01:44.468914"], ["updated_at", "2018-11-13 01:01:44.468914"]]
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 64ms (Views: 52.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:01:48 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:02:02 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TfYW4y5fMhcEU5U45iKHYE1mUhhJQnPpxZ3evV7qABWGE/hX6IKszWbq3v5vDuiU2OI01EiohU2ngzF/96Gczg==", "simulation"=>{"nome"=>"Teste Rapidoo", "nomeEmpresa"=>"Rapidoo", "faturamentoMensal"=>"75000", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[36mSimulation Create (0.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Teste Rapidoo"], ["nomeEmpresa", "Rapidoo"], ["faturamentoMensal", 75000.0], ["valorTitulo", 1500.0], ["prazoTitulo", 28.0], ["valorTaxa", 4.62], ["valorReceber", 1430.7], ["created_at", "2018-11-13 01:02:02.708188"], ["updated_at", "2018-11-13 01:02:02.708188"]]
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 34.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:02:37 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 65ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:03:30 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"coQmzBIJNMyEzP6Aj2XB3p+gPJmSaPMdHyF7wk0NHn+5Ych41NSqFuZ1tUYGSa4qCiRaVZOCBbl9P5QA5EaCpA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[36mSimulation Create (0.4ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "12"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 01:03:30.352115"], ["updated_at", "2018-11-13 01:03:30.352115"]]
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 103ms (Views: 73.5ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mSimulation Load (2.0ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:09:06 -0200
+Processing by SimulationsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ricardo/Documents/rails/Rapidoo/CalculoTaxa/CalculoTaxa/app/models/simulation.rb:3: syntax error, unexpected tIDENTIFIER, expecting tCONSTANT
+...es :valorTitulo, ::numericality => { :greater_than_or_equal_...
+...                   ^~~~~~~~~~~~):
+  
+app/models/simulation.rb:3: syntax error, unexpected tIDENTIFIER, expecting tCONSTANT
+app/controllers/simulations_controller.rb:5:in `index'
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:10:31 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 74ms (Views: 53.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:10:39 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YeSYjzsK0Du4ZSPDzjaXlN8VLKkWCL6kEMLQtvU152f4J/QvD2FRsAUn83jUH1PqARMSOyOLNUAEYy7k+3y3WA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:10:44 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:10:46 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7pbiEHmQ3ktkdOHQHR97q4N0q+zMgRJFMpniT65EAK2eTcodY3C8pDTAzxaXbmQcAvsPYaxj60Aa5nbMPBAPQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:10:47 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 57ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:11:33 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 31.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:11:39 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k4UWWocc6xzqnm5rbmR/Fy6NJ2aOGk+mL2V5I8YhPyoKRnr6s3dql1fcvtB0Tbtp8IsZ9LuZxEI7xIdxyGhvFQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:11:55 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 42.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:11:56 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vSn0M3ixuBhomLdSL97vAawMH7RY5gUpG63lR8IdbDQk6piTTNo5k9XaZ+k19yt/cgohJm1ljs0PDBsVzFQ8Cw==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[36mSimulation Create (1.0ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 01:11:56.783609"], ["updated_at", "2018-11-13 01:11:56.783609"]]
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 64ms (Views: 51.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:12:01 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:12:02 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KSZhKMrGBrYjp9JD1YsuXAapkkMm1IAvAeKvWhqicVuw5Q2I/q2HPZ7lAvjPouoi2K+s0RNXC8sVQ1EIFOshZA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[36mSimulation Create (0.8ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", 12.0], ["valorTitulo", 12.0], ["prazoTitulo", 12.0], ["valorTaxa", 1.98], ["valorReceber", 11.7624], ["created_at", "2018-11-13 01:12:02.928989"], ["updated_at", "2018-11-13 01:12:02.928989"]]
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 38.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:13:11 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 27.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:13:21 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cUeu7KWND8lb5eZ6FIiTbNZFMVNPCtIKtQDRHnMCXCq6okBYY1CREzlcrbydpPyYQ8FXn07gJK7XHj7c2knA8Q==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 22.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:16:12 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 90ms (Views: 65.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:16:19 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bPUzjRbWBR1vNz3TYw9iZb7IU3SMkl0muVCKIM9+4zb1Nl8tIr2EltJ17Wh5JqYbYM5t5rkR1sKt8XRywTezCQ==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/new.html.erb within layouts/application
+  Rendered simulations/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:16:24 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 46ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:16:35 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wpIJ+Amm9UCaYo1CaV63up3UGBsbv9+BFx5m7beO7udbUWVYPc10yycgXflzd3PEQ9ImiS48VGUDv5i/uce+2A==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  Rendering simulations/show.html.erb within layouts/application
+  Rendered simulations/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-12 23:16:37 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 58ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-12 23:16:56 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zM82yO5CeJc5/Svw1C+lrFd2o5zhZv7SgvRglIRBNzkHKth8KJ/mTVtEYDZdA8pYwvLFUOCMCHbg6o9WLQqr4g==", "simulation"=>{"nome"=>"asd", "nomeEmpresa"=>"q1", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:24
+No template found for SimulationsController#create, rendering head :no_content
+Completed 204 No Content in 210ms (ActiveRecord: 0.8ms)
+
+

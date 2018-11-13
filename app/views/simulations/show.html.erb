@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valor da taxa:</strong>
+  <%= @simulation.valorTaxa %>
+</p>
+
+<p>
+  <strong>Valor a receber:</strong>
+  <%= @simulation.valorReceber %>
+</p>
+
+<%= link_to 'Simular novamente', simulations_path %>
