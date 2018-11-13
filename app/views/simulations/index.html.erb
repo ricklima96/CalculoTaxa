@@ -1,4 +1,4 @@
-<h1>Simular</h1>
+<h1>Simulador de Taxa de Factoring</h1>
 
 <%= form_for @simulation do |form| %>
 
@@ -12,26 +12,30 @@
 <% end %>
 
 <p>
-  <%= form.label :nome  %>
+  <%= form.label "Seu nome"  %>
   <%= form.text_field :nome  %>
 </p>
 <p>
-  <%= form.label :nomeEmpresa  %>
+  <%= form.label "Email" %>
+  <%= form.text_area :email  %>
+</p>
+<p>
+  <%= form.label "Empresa" %>
   <%= form.text_area :nomeEmpresa  %>
 </p>
 <p>
-  <%= form.label :faturamentoMensal  %>
+  <%= form.label "Faturamento Mensal"  %>
   <%= form.text_area :faturamentoMensal  %>
 </p>
 <p>
-  <%= form.label :valorTitulo  %>
+  <%= form.label "Valor do Título"  %>
   <%= form.text_area :valorTitulo  %>
 </p>
 <p>
-  <%= form.label :prazoTitulo  %>
+  <%= form.label "Prazo do Título (dias)"  %>
   <%= form.text_area :prazoTitulo  %>
 </p>
 <p>
-  <%= form.submit "SIMULAR" %>
+  <%= form.submit "Simular" %>
 </p>
 <% end %>

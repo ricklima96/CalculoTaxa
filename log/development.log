@@ -2560,3 +2560,314 @@ Processing by SimulationsController#success as HTML
 Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:06:12 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 94ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:31:56 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jc11JlwP8y/G62wJNxns1fnr1gVDy+N0f3BgqYmPsb3uKJuSmtJt9aRSJ8++NYMhbG+wyUIhFdAdbo9rIMQtZg==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"Empresa", "faturamentoMensal"=>"12", "valorTitulo"=>"12", "prazoTitulo"=>"12"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 89ms (Views: 77.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:32:04 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ytdK/C7vdxwt4qaAJ/sYzLltInWlScLzDjy1t3IEZadTFCZcGoT2l5Cgdjs90tyyZ2sc55DKSRcanUvlfE01mA==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"Empresa", "faturamentoMensal"=>"12", "valorTitulo"=>"1200", "prazoTitulo"=>"9"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 59ms (Views: 52.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:32:11 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gqhohj8DSDvAi0qzsWR77kOlNiX2fU3SzEOXqg7SFFODawQmC2jJsH3JmgirTb+QnaMIt8P+xjbY4mn4AJtEbA==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"", "faturamentoMensal"=>"12", "valorTitulo"=>"1200", "prazoTitulo"=>"900"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:32:14 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4k6Bgt/eAHT89pCvMMA4kF66e9yMtASM+ZpjpRw2o6x7je0i67WB/0G0QBQq6fzugLxFTrk3j2jtO533En/zkw==", "simulation"=>{"nome"=>"Ricardo", "nomeEmpresa"=>"r", "faturamentoMensal"=>"12", "valorTitulo"=>"1200", "prazoTitulo"=>"900"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[36mSimulation Create (1.9ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "valorTaxa", "valorReceber", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ricardo"], ["nomeEmpresa", "r"], ["faturamentoMensal", 12.0], ["valorTitulo", 1200.0], ["prazoTitulo", 900.0], ["valorTaxa", 148.5], ["valorReceber", -582.0], ["created_at", "2018-11-13 22:32:14.350123"], ["updated_at", "2018-11-13 22:32:14.350123"]]
+  ↳ app/controllers/simulations_controller.rb:28
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:28
+Redirected to http://localhost:3000/simulations/36
+Completed 302 Found in 17ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/simulations/36" for 127.0.0.1 at 2018-11-13 20:32:14 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mSimulation Load (0.4ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 60ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:32:15 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:32:22 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rBcCcey1XY8zgSxrOu3Gtkt8F8tBUtOyBchZ/EI8a8Fn8uzFKmjDVVE4Z62zwalC3vhxB0C4JRZn1rY+63f3Gg==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:25:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:33:26 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zb8vi7iAmV82XEUU6q0IuBakZDNqG2/gdi2mlNWJB1b8fEMrjOsY1Isela/whMzGyKJaoV+Y5ARijFjG28BXaQ==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `/' for nil:NilClass):
+  
+app/controllers/simulations_controller.rb:25:in `create'
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:40:15 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zb8vi7iAmV82XEUU6q0IuBakZDNqG2/gdi2mlNWJB1b8fEMrjOsY1Isela/whMzGyKJaoV+Y5ARijFjG28BXaQ==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 69ms (Views: 47.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:40:19 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 45ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:40:25 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ac+sjqa9kotWHfxOdb8529Q/lH9cc2upRiDaXPbZjnOYDMAuktYTAOtfLPVvlv2lCjmq7Wnw4E1SgSQO+JDeTA==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"121", "prazoTitulo"=>"22"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 55ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:40:30 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/FE3zfgP+LK+M6WOEE2zD/KkW7Cur8sTnzGiPT0SRw6Mih/A4u+aXe6Hi0iaPKy4cyv/Pc5NMha3Tja+r0ZIw==", "simulation"=>{"nome"=>"as", "nomeEmpresa"=>"12", "faturamentoMensal"=>"12", "valorTitulo"=>"600", "prazoTitulo"=>"22"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.8ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "as"], ["nomeEmpresa", "12"], ["faturamentoMensal", 12.0], ["valorTitulo", 600.0], ["prazoTitulo", 22.0], ["created_at", "2018-11-13 22:40:30.426471"], ["updated_at", "2018-11-13 22:40:30.426471"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+Redirected to http://localhost:3000/simulations/37
+Completed 302 Found in 13ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/simulations/37" for 127.0.0.1 at 2018-11-13 20:40:30 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mSimulation Load (1.0ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 51ms (Views: 42.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:40:32 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 62ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:40:34 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+Tc+H2/xkUN+6JBC1kxrclP3frmB/PSlj8geT7Zwxt8ATJMu2JYn29C6YeCdV5ZXMu7NuftBXb0Ic+7l5JfwA==", "simulation"=>{"nome"=>"", "nomeEmpresa"=>"", "faturamentoMensal"=>"", "valorTitulo"=>"", "prazoTitulo"=>""}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:43:08 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t2CH1RRRLRG5pDNcMcTZLM2OsSKkpY2vklhqB5nkXTguo+t1IDqsmgTm4+cr7R1SE4iPsJEmBkuG+ZRVl60NBw==", "simulation"=>{"nome"=>"Empresa Teste", "nomeEmpresa"=>"Empresa Teste", "faturamentoMensal"=>"75000", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"SIMULAR"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.6ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Empresa Teste"], ["nomeEmpresa", "Empresa Teste"], ["faturamentoMensal", 75000.0], ["valorTitulo", 1500.0], ["prazoTitulo", 28.0], ["created_at", "2018-11-13 22:43:08.877896"], ["updated_at", "2018-11-13 22:43:08.877896"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+Redirected to http://localhost:3000/simulations/38
+Completed 302 Found in 29ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/simulations/38" for 127.0.0.1 at 2018-11-13 20:43:08 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mSimulation Load (0.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 55ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:43:56 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:44:27 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 47ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:45:07 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 44ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:45:21 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4W/f1u9/+NyN8ylU5IhRD/ut9u2VUC7yEIIb5K1/H6Z4rLN22xR5VzCx+e/+oZVxJavIf6DTpRYEI+W2ozZPmQ==", "simulation"=>{"nome"=>"Ricardo Ribeiro", "nomeEmpresa"=>"Rapidoo", "faturamentoMensal"=>"75000", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"Simular"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.7ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ricardo Ribeiro"], ["nomeEmpresa", "Rapidoo"], ["faturamentoMensal", 75000.0], ["valorTitulo", 1500.0], ["prazoTitulo", 28.0], ["created_at", "2018-11-13 22:45:21.830796"], ["updated_at", "2018-11-13 22:45:21.830796"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+Redirected to http://localhost:3000/simulations/39
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/simulations/39" for 127.0.0.1 at 2018-11-13 20:45:21 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mSimulation Load (0.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations/39" for 127.0.0.1 at 2018-11-13 20:45:45 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations/39" for 127.0.0.1 at 2018-11-13 20:45:51 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mSimulation Load (0.2ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:45:53 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 55ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:47:57 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 20:48:19 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o6V+q4s60MCcNTx8TFW77qtrPJdSBpN9fqA3NyCwH/Y6ZhILv1FRSyF37MdWfH+QdW0CBWeFGJlqAcllLvlPyQ==", "simulation"=>{"nome"=>"Ricardo", "email"=>"rlribeiro", "nomeEmpresa"=>"Ricardo", "faturamentoMensal"=>"75000", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"Simular"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[36mSimulation Create (0.8ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "email", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ricardo"], ["email", "rlribeiro"], ["nomeEmpresa", "Ricardo"], ["faturamentoMensal", 75000.0], ["valorTitulo", 1500.0], ["prazoTitulo", 28.0], ["created_at", "2018-11-13 22:48:19.088985"], ["updated_at", "2018-11-13 22:48:19.088985"]]
+  ↳ app/controllers/simulations_controller.rb:27
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/simulations_controller.rb:27
+Redirected to http://localhost:3000/simulations/40
+Completed 302 Found in 13ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/simulations/40" for 127.0.0.1 at 2018-11-13 20:48:19 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mSimulation Load (0.3ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 54ms (Views: 45.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:50:49 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 70ms (Views: 49.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:51:10 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 50ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 20:51:26 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+

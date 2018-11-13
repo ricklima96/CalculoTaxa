@@ -14,6 +14,10 @@ class SimulationsController < ApplicationController
 
   def success
     @simulation = Simulation.find(params[:id])
+    @simulation.valorTaxa = (@simulation.prazoTitulo / 10) * 1.65
+    @simulation.valorReceber = (@simulation.valorTitulo - (@simulation.valorTitulo * (@simulation.valorTaxa/100)))
+
+    #ToDo: Implementação de rotina para varia a taxa, eg. acima de 100k/mês é 1.5% e abaixo de 50k/mês é 1.8%);
   end
 
   def update
@@ -21,9 +25,6 @@ class SimulationsController < ApplicationController
 
   def create
     @simulation = Simulation.new(simulation_params)
-
-    @simulation.valorTaxa = (@simulation.prazoTitulo / 10) * 1.65
-    @simulation.valorReceber = (@simulation.valorTitulo - (@simulation.valorTitulo * (@simulation.valorTaxa/100)))
 
     if @simulation.save
         redirect_to success_path(@simulation.id)
