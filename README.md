@@ -19,4 +19,4 @@ Instruções de deploy
 2. Acesse o endereço "http://localhost:3000/simulations"
 
 Ruby version
-ruby 2.5.3p105 
+* ruby 2.5.3p105 
