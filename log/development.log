@@ -3042,3 +3042,10 @@ Processing by SimulationsController#success as HTML
 Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 21:59:28 -0200
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 91ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
