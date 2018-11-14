@@ -15,7 +15,9 @@ E serão exibidos:
 
 
 Instruções de deploy
-1. Suba o servidor utilizando o comando ruby s
+1. Inicie localmente o banco de dados (Postgres e Homebrew previamente instalados) utilizando 
+```brew services start postgres```
+1. Suba o servidor utilizando o comando ```ruby s```
 2. Acesse o endereço "http://localhost:3000/simulations"
 
 Ruby version
