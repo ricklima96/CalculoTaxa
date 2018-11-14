@@ -3049,3 +3049,35 @@ Processing by SimulationsController#index as HTML
 Completed 200 OK in 91ms (Views: 80.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/simulations" for 127.0.0.1 at 2018-11-13 22:24:01 -0200
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ricardo/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SimulationsController#index as HTML
+  Rendering simulations/index.html.erb within layouts/application
+  Rendered simulations/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 510ms (Views: 419.6ms | ActiveRecord: 46.7ms)
+
+
+Started POST "/simulations" for 127.0.0.1 at 2018-11-13 22:26:32 -0200
+Processing by SimulationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1y0z8jto26oqhO1ynW/LTKqyxY9XMy9hRzEmUINho9IcyN1G/bVFcEg9prQUQ6S4PzajQ1bZ2cUlL8mSKio/CQ==", "simulation"=>{"nome"=>"as", "email"=>"as", "nomeEmpresa"=>"as", "faturamentoMensal"=>"23888", "valorTitulo"=>"1500", "prazoTitulo"=>"28"}, "commit"=>"Simular"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/simulations_controller.rb:29
+  [1m[36mSimulation Create (9.6ms)[0m  [1m[32mINSERT INTO "simulations" ("nome", "email", "nomeEmpresa", "faturamentoMensal", "valorTitulo", "prazoTitulo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["nome", "as"], ["email", "as"], ["nomeEmpresa", "as"], ["faturamentoMensal", "23888.0"], ["valorTitulo", "1500.0"], ["prazoTitulo", "28.0"], ["created_at", "2018-11-14 00:26:32.537820"], ["updated_at", "2018-11-14 00:26:32.537820"]]
+  ↳ app/controllers/simulations_controller.rb:29
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/simulations_controller.rb:29
+Redirected to http://localhost:3000/simulations/3
+Completed 302 Found in 16ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/simulations/3" for 127.0.0.1 at 2018-11-13 22:26:32 -0200
+Processing by SimulationsController#success as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSimulation Load (41.8ms)[0m  [1m[34mSELECT  "simulations".* FROM "simulations" WHERE "simulations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/simulations_controller.rb:16
+  Rendering simulations/success.html.erb within layouts/application
+  Rendered simulations/success.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 133ms (Views: 77.3ms | ActiveRecord: 42.0ms)
+
+
